@@ -69,8 +69,8 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 # Data de entrega
 
   - Projeto individual;
-  - Serão `X` dias de projeto.
-  - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+  - Serão `3` dias de projeto.
+  - Data de entrega para avaliação final do projeto: `19/07/2021 - 14:00h`.
 
 ---
 
@@ -87,7 +87,7 @@ Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, pr
 ## Antes de começar a desenvolver:
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-013-a-project-shopping-cart.git`.
+  * `git clone git@github.com:tryber/sd-013-a-project-shopping-cart.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-013-a-project-shopping-cart`
 
