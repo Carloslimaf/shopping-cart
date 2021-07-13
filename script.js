@@ -75,10 +75,14 @@ const appendData = (results) => {
 };
 
 const fetchMl = (item) => {
+  const loading = document.querySelector('.loading');
   fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${item}`)
   .then((response) => {
     response.json()
-      .then((data) => appendData(data.results));
+      .then((data) => {
+        appendData(data.results);
+        loading.remove();
+      });
   });
 };
 
@@ -117,9 +121,21 @@ const getItemSave = () => {
   });
 };
 
+const esvaziarCartBtn = () => {
+  const botao = document.querySelector('.empty-cart');
+  botao.addEventListener('click', () => {
+    const olItems = document.querySelector(olClass);
+    olItems.innerHTML = '';
+    localStorage.removeItem('lista');
+    const totalPrice = document.querySelector('.total-price');
+    totalPrice.innerText = 0;
+  });
+};
+
 window.onload = () => { 
   fetchMl('computador');
   buttonAddCart();
   getItemSave();
   pullDiv();
+  esvaziarCartBtn();
 };
